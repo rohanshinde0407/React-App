@@ -1,0 +1,145 @@
+/* ========================================================
+   ACTIVITY LIST  (prefix: al)
+   ======================================================== */
+
+.al__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.875rem;
+}
+
+/* ---------- Filter pills ---------- */
+.al__filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.al__filters::-webkit-scrollbar {
+  display: none;
+}
+
+.al__pill {
+  padding: 0.4375rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.al__pill--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(26, 60, 110, 0.25);
+}
+
+.al__pill:not(.al__pill--active):active {
+  background: #f1f5f9;
+}
+
+/* ---------- List ---------- */
+.al__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.al__row {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  animation: al-slide-in 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.al__row:last-child {
+  border-bottom: none;
+}
+
+@keyframes al-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Icon circle ---------- */
+.al__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.al__row:active .al__icon {
+  transform: scale(0.9);
+}
+
+.al__icon--out {
+  background: #eef2ff;
+  color: var(--color-primary);
+}
+
+.al__icon--in {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ---------- Text ---------- */
+.al__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.al__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.al__dot {
+  color: var(--color-text-muted);
+  margin: 0 0.1rem;
+}
+
+.al__date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ---------- Amount ---------- */
+.al__amount {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.al__amount--out {
+  color: var(--color-text);
+}
+
+.al__amount--in {
+  color: var(--color-text);
+}

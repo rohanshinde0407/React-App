@@ -1,0 +1,12 @@
+.goals__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .goals__stats {
+    grid-template-columns: 1fr;
+  }
+}

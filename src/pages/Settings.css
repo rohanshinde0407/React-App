@@ -1,0 +1,229 @@
+/* ========================================================
+   DESKTOP SETTINGS
+   ======================================================== */
+.settings__card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.25rem;
+}
+
+.settings__card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+.settings__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.settings__field label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 0.375rem;
+}
+
+.settings__field input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-white);
+  transition: border-color 0.2s;
+}
+
+.settings__field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.settings__field input:disabled {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+}
+
+.settings__toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.settings__toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.settings__toggle-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.settings__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.settings__btn {
+  padding: 0.625rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.settings__btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.settings__btn--primary:hover {
+  opacity: 0.9;
+}
+
+.settings__btn--outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.settings__btn--outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .settings__form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   MOBILE PROFILE  (prefix: mp)
+   ======================================================== */
+.mp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+
+/* ---------- Skeleton ---------- */
+.mp__skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.mp__skeleton-menu {
+  width: 100%;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---------- Header / Avatar ---------- */
+.mp__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.mp__avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #475569, #94a3b8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 3px solid var(--color-white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.mp__avatar span {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.mp__name {
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.mp__email {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Menu Items ---------- */
+.mp__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mp__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.125rem;
+  background: var(--color-white);
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mp__menu-item:active {
+  background: #f8fafc;
+  transform: scale(0.98);
+}
+
+.mp__menu-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.mp__menu-label {
+  flex: 1;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.mp__menu-arrow {
+  color: #c1c8d4;
+  flex-shrink: 0;
+}

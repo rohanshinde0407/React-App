@@ -1,0 +1,131 @@
+/* ========================================================
+   DESKTOP CARDS
+   ======================================================== */
+.cards__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .cards__stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   MOBILE CARD VIEW  (prefix: mc)
+   ======================================================== */
+.mc {
+  display: flex;
+  flex-direction: column;
+}
+
+.mc__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mc__skeleton-stats {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.mc__skeleton-stat {
+  flex: 1;
+}
+
+.mc__skeleton-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.mc__skeleton-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.mc__skeleton-row-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+/* ---------- Summary Card ---------- */
+.mc__summary {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 0.75rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+}
+
+.mc__month {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.125rem;
+}
+
+.mc__amount {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+  margin-bottom: 0.75rem;
+}
+
+.mc__chart {
+  margin: 0 -0.25rem;
+}
+
+/* ---------- Income / Spend ---------- */
+.mc__stats {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.mc__stat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--color-white);
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.mc__stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.mc__stat-label {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.mc__stat-value {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.2px;
+}
