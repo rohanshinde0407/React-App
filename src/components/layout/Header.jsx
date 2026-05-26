@@ -37,7 +37,7 @@ export default function Header() {
         <button className="header__profile">
           <div className="header__avatar">RS</div>
           <div className="header__profile-info">
-            <span className="header__profile-name">Rohan Shinde</span>
+            <span className="header__profile-name">Rohan Vikas Shinde</span>
             <span className="header__profile-role">Admin</span>
           </div>
           <ChevronDown size={16} className="header__profile-chevron" />
